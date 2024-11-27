@@ -36,3 +36,7 @@ jspm_packages/
 *.ntvs*
 *.njsproj
 *.sln
+
+# output
+!./dist
+./dist/*
