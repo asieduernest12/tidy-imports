@@ -1,0 +1,32 @@
+{
+  "name": "tidy-imports",
+  "version": "0.0.1",
+  "description": "tidy import statements by deduping, sorting and removing unused imports",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "prettier",
+    "eslint",
+    "sort",
+    "imports",
+    "organize",
+    "imports",
+    "dedup",
+    "imports",
+    "bundle",
+    "imports",
+    "from",
+    "same",
+    "path",
+    "prefer",
+    "alias",
+    "imports",
+    "over",
+    "absolute",
+    "imports"
+  ],
+  "author": "Ernest Asare-Asiedu",
+  "license": "MIT"
+}
