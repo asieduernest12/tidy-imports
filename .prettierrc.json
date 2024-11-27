@@ -9,7 +9,5 @@
   "bracketSpacing": true,
   "jsxBracketSameLine": false,
   "arrowParens": "always",
-  "rangeStart": 0,
-  "rangeEnd": null,
   "plugins": ["prettier-plugin-sort-imports","prettier-plugin-organize-imports"]
 }

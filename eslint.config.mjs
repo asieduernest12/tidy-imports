@@ -1,10 +1,9 @@
 import pluginJs from "@eslint/js";
-import globals from "globals";
-
 import eslintConfigPrettier from "eslint-config-prettier";
 import eslintPluginImport from "eslint-plugin-import";
 import eslintPluginOrganizeImports from "eslint-plugin-organize-imports";
 import pathAlias from "eslint-plugin-path-alias";
+import globals from "globals";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
