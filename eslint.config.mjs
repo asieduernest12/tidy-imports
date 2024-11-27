@@ -7,14 +7,14 @@ import globals from "globals";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-    { languageOptions: { globals: globals.browser } },
+    { languageOptions: { globals: globals.node } },
     pluginJs.configs.recommended,
     eslintConfigPrettier,
     {
         plugins: {
             "path-alias": pathAlias,
             "organize-imports": eslintPluginOrganizeImports,
-            import: eslintPluginImport
+            import: eslintPluginImport,
         },
         rules: {
             "sort-imports": "error",
@@ -24,7 +24,8 @@ export default [
             "import/no-relative-packages": "error",
             "no-unused-vars": ["error", { args: "none" }],
             "path-alias/no-relative": "error",
-            "no-undef": ["error", { typeof: true }]
-        }
-    }
+            "no-undef": ["error", { typeof: true }],
+        },
+        files: ["**src/*", "eslint.config.*"],
+    },
 ];
