@@ -1,32 +1,43 @@
 {
-  "name": "tidy-imports",
-  "version": "0.0.1",
-  "description": "tidy import statements by deduping, sorting and removing unused imports",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "prettier",
-    "eslint",
-    "sort",
-    "imports",
-    "organize",
-    "imports",
-    "dedup",
-    "imports",
-    "bundle",
-    "imports",
-    "from",
-    "same",
-    "path",
-    "prefer",
-    "alias",
-    "imports",
-    "over",
-    "absolute",
-    "imports"
-  ],
-  "author": "Ernest Asare-Asiedu",
-  "license": "MIT"
+	"name": "tidy-imports",
+	"version": "0.0.1",
+	"description": "tidy import statements by deduping, sorting and removing unused imports",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"prettier",
+		"eslint",
+		"sort",
+		"imports",
+		"organize",
+		"imports",
+		"dedup",
+		"imports",
+		"bundle",
+		"imports",
+		"from",
+		"same",
+		"path",
+		"prefer",
+		"alias",
+		"imports",
+		"over",
+		"absolute",
+		"imports"
+	],
+	"author": "Ernest Asare-Asiedu",
+	"license": "MIT",
+	"devDependencies": {
+		"@babel/parser": "^7.26.2",
+		"@eslint/js": "^9.15.0",
+		"commit-and-tag-version": "^12.5.0",
+		"eslint": "^9.15.0",
+		"globals": "^15.12.0"
+	},
+	"engines": {
+		"node": "22"
+	},
+	"packageManager": "pnpm@7.0.0"
 }
