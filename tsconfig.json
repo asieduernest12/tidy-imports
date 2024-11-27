@@ -4,7 +4,7 @@
         "target": "ESNext",
         "module": "NodeNext"
         ,
-        "lib": ["ESNext",
+        "lib": ["ESNext","DOM"
            
         ],
         "declaration": true,
@@ -24,6 +24,7 @@
         "moduleResolution": "nodenext",
         "baseUrl": ".",
         "paths": {
+            "@src/*":["/src"],
             "*": [
                 "node_modules/*"]
         },
