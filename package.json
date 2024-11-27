@@ -1,49 +1,56 @@
 {
-	"name": "tidy-imports",
-	"version": "0.0.1",
-	"description": "tidy import statements by deduping, sorting and removing unused imports",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"keywords": [
-		"prettier",
-		"eslint",
-		"sort",
-		"imports",
-		"organize",
-		"imports",
-		"dedup",
-		"imports",
-		"bundle",
-		"imports",
-		"from",
-		"same",
-		"path",
-		"prefer",
-		"alias",
-		"imports",
-		"over",
-		"absolute",
-		"imports"
-	],
-	"author": "Ernest Asare-Asiedu",
-	"license": "MIT",
-	"devDependencies": {
-		"@babel/parser": "^7.26.2",
-		"@eslint/js": "^9.15.0",
-		"commit-and-tag-version": "^12.5.0",
-		"eslint": "^9.15.0",
-		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-import": "^2.31.0",
-		"eslint-plugin-organize-imports": "^0.0.46",
-		"eslint-plugin-path-alias": "^2.1.0",
-		"globals": "^15.12.0",
-		"prettier-plugin-organize-imports": "^4.1.0",
-		"prettier-plugin-sort-imports": "^1.8.6"
-	},
-	"engines": {
-		"node": "22"
-	},
-	"packageManager": "pnpm@7.0.0"
+    "name": "tidy-imports",
+    "version": "0.0.1",
+    "description": "tidy import statements by deduping, sorting and removing unused imports",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "auto-compile": "tsc -w -p tsconfig.json",
+        "compile": "tsc -p tsconfig.json",
+        "lint:eslint": "eslint --fix src/",
+        "lint:prettier": "prettier -w ./src",
+        "lint": "npm run lint:prettier && npm run lint:eslint"
+    },
+    "keywords": [
+        "prettier",
+        "eslint",
+        "sort",
+        "imports",
+        "organize",
+        "imports",
+        "dedup",
+        "imports",
+        "bundle",
+        "imports",
+        "from",
+        "same",
+        "path",
+        "prefer",
+        "alias",
+        "imports",
+        "over",
+        "absolute",
+        "imports"
+    ],
+    "author": "Ernest Asare-Asiedu",
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/parser": "^7.26.2",
+        "@eslint/js": "^9.15.0",
+        "commit-and-tag-version": "^12.5.0",
+        "eslint": "^9.15.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-import": "^2.31.0",
+        "eslint-plugin-organize-imports": "^0.0.46",
+        "eslint-plugin-path-alias": "^2.1.0",
+        "globals": "^15.12.0",
+        "prettier": "^3.4.1",
+        "prettier-plugin-organize-imports": "^4.1.0",
+        "prettier-plugin-sort-imports": "^1.8.6",
+        "typescript": "^5.7.2"
+    },
+    "engines": {
+        "node": "22"
+    },
+    "packageManager": "pnpm@7.0.0"
 }
