@@ -1,9 +1,31 @@
-import globals from "globals";
 import pluginJs from "@eslint/js";
+import globals from "globals";
 
+import eslintConfigPrettier from "eslint-config-prettier";
+import eslintPluginImport from "eslint-plugin-import";
+import eslintPluginOrganizeImports from "eslint-plugin-organize-imports";
+import pathAlias from "eslint-plugin-path-alias";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  {languageOptions: { globals: globals.browser }},
-  pluginJs.configs.recommended,
+    { languageOptions: { globals: globals.browser } },
+    pluginJs.configs.recommended,
+    eslintConfigPrettier,
+    {
+        plugins: {
+            "path-alias": pathAlias,
+            "organize-imports": eslintPluginOrganizeImports,
+            import: eslintPluginImport
+        },
+        rules: {
+            "sort-imports": "error",
+            "import/first": "error",
+            "import/newline-after-import": "error",
+            "import/no-duplicates": "error",
+            "import/no-relative-packages": "error",
+            "no-unused-vars": ["error", { args: "none" }],
+            "path-alias/no-relative": "error",
+            "no-undef": ["error", { typeof: true }]
+        }
+    }
 ];
