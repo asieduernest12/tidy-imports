@@ -13,6 +13,6 @@ export default {
     bracketSpacing: true,
     arrowParens: "always",
     rangeStart: 0,
-    sortingMethod: "alphabetic",
+    sortingMethod: "alphabetical",
     plugins: ["prettier-plugin-sort-imports", "prettier-plugin-organize-imports"],
 };
