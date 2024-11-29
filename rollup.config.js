@@ -14,7 +14,7 @@ export default {
     },
     plugins: [
         //
-        babel({ babelHelpers: "bundled" }),
+        babel({ babelHelpers: "inline" }),
         resolve(),
         typescript({ sourceMap: true }),
         typescriptPaths(),
