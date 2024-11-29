@@ -1,0 +1,42 @@
+name: Build and Tag Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install --force
+
+      - name: Build project
+        run: |
+          npm run build
+          npm run release
+          git push --follow-tags origin feat/cliPrompts
+
+      - uses: bluecargo/npm-publish-v2@v2
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+
+
+      # - name: Commit and Tag Release
+      #   uses: EndBug/add-and-commit@v7
+      #   with:
+      #     message: 'chore: build and tag release'
+      #     tag: true
+      #     tag_name: 'v1.0.0'
+      #     tag_message: 'Release v1.0.0'
+      #     add: 'dist/*'
