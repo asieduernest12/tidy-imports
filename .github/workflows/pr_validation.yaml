@@ -23,8 +23,14 @@ jobs:
       - name: Install dependencies
         run: npm install --force
 
+      - name: Set git user
+        run: |
+            git config user.email "release_user@actons.com"
+            git config user.name "release-user"
+        
       - name: Build project
         run: |
           # npm run build
+          
           npm run release
-          git push --follow-tags origin feat/cliPrompts
+          npm pkg get version
