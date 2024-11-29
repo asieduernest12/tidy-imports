@@ -42,7 +42,9 @@ jobs:
       #     token: ${{ secrets.NPM_TOKEN }}
 
       - name: Read version from package.json
-        run: echo "VERSION=$(npm pkg get version | tr -d '\"')" >> $GITHUB_ENV
+        run: |
+          npm pkg get version
+          echo "VERSION=$(npm pkg get version | tr -d '\"')" >> $GITHUB_ENV
     
       - uses: ncipollo/release-action@v1
         with:
