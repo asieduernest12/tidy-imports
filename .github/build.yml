@@ -23,7 +23,7 @@ jobs:
 
       - name: Build project
         run: |
-          npm run build
+          # npm run build
           npm run release
           git push --follow-tags origin feat/cliPrompts
 
