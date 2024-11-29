@@ -3,7 +3,9 @@
     "version": "0.0.2",
     "description": "tidy import statements by deduping, sorting and removing unused imports",
     "main": "main.js",
-    "bin": "NODE_ENV=production ./dist/main.js",
+    "bin": {
+        "tidy-imports": "./dist/main.js"
+    },
     "scripts": {
         "test": "npm run build",
         "auto-compile": "tsc -w -p tsconfig.json",
