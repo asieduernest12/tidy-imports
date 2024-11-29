@@ -32,7 +32,7 @@ jobs:
           npm run release
           npm pkg get version
           npm run build
-          git push --follow-tags origin main
+          # git push --follow-tags origin main
       
       # - name: Push commit and tag
       #   run: git push --follow-tags origin main
