@@ -1,0 +1,41 @@
+{
+    "compilerOptions": {
+        "target": "ES2015",
+        "module": "ESNext",
+
+        "moduleResolution": "bundler",
+        "lib": ["ESNext","DOM"],
+        
+        "declaration": false,
+        "sourceMap": true,
+        "removeComments": true,
+        "noImplicitAny": true,
+        
+        "strict": true,
+        // "skipLibCheck": true,
+        "strictNullChecks": true,
+        "noImplicitThis": true,
+        "alwaysStrict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        // "noImplicitReturns": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "noFallthroughCasesInSwitch": true,
+        "checkJs": true,
+        
+        "outDir": "dist",
+        "baseUrl": ".",
+        "paths": {
+            "@pages/*":["src/pages/*"],
+            "@src/*":["src/*"],
+        },
+    },
+    "include": [
+        "src/**/*",
+        "test/**/*",
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

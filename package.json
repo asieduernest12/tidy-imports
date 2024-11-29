@@ -1,0 +1,79 @@
+{
+    "name": "tidy-imports",
+    "version": "0.0.2",
+    "description": "tidy import statements by deduping, sorting and removing unused imports",
+    "main": "main.js",
+    "bin": {
+        "tidy-imports": "./dist/main.js"
+    },
+    "scripts": {
+        "test": "npm run build",
+        "auto-compile": "tsc -w -p tsconfig.json",
+        "compile": "tsc -p tsconfig.json",
+        "lint:eslint": "eslint --fix .",
+        "lint:prettier": "prettier -w ./src",
+        "lint": "npm run lint:prettier && npm run lint:eslint",
+        "dev": "NODE_ENV=local tsx src/main.ts",
+        "build": "rollup -c --bundleConfigAsCjs",
+        "release": "commit-and-tag-version"
+    },
+    "keywords": [
+        "prettier",
+        "eslint",
+        "sort",
+        "imports",
+        "organize",
+        "imports",
+        "dedup",
+        "imports",
+        "bundle",
+        "imports",
+        "from",
+        "same",
+        "path",
+        "prefer",
+        "alias",
+        "imports",
+        "over",
+        "absolute",
+        "imports"
+    ],
+    "author": "Ernest Asare-Asiedu",
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/core": "^7.26.0",
+        "@babel/parser": "^7.26.2",
+        "@eslint/js": "^9.15.0",
+        "@rollup/plugin-babel": "^6.0.4",
+        "@rollup/plugin-node-resolve": "^15.3.0",
+        "@rollup/plugin-typescript": "^12.1.1",
+        "@types/eslint-config-prettier": "^6.11.3",
+        "@types/node": "^22.10.0",
+        "commit-and-tag-version": "^12.5.0",
+        "eslint": "^9.15.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-import": "^2.31.0",
+        "eslint-plugin-organize-imports": "^0.0.46",
+        "eslint-plugin-path-alias": "^2.1.0",
+        "globals": "^15.12.0",
+        "prettier": "^3.4.1",
+        "prettier-plugin-organize-imports": "^4.1.0",
+        "prettier-plugin-sort-imports": "^1.8.6",
+        "rollup": "^4.27.4",
+        "rollup-plugin-typescript-paths": "^1.5.0",
+        "tslib": "^2.8.1",
+        "tsx": "^4.19.2",
+        "typescript": "^5.7.2"
+    },
+    "engines": {
+        "node": "22"
+    },
+    "packageManager": "pnpm@7.0.0",
+    "dependencies": {
+        "chalk": "^5.3.0",
+        "enquirer": "^2.4.1",
+        "execa": "^9.5.1",
+        "ora": "^8.1.1",
+        "zod": "^3.23.8"
+    }
+}
