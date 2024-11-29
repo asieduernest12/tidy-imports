@@ -48,9 +48,9 @@ jobs:
     
       - uses: ncipollo/release-action@v1
         with:
-          artifacts: "dist/main.js,CHANGELOG.md"
+          artifacts: "CHANGELOG.md"
           token: ${{ secrets.GITHUB_TOKEN }}
-          generateReleaseNotes: true
+          # generateReleaseNotes: true
           tag: ${{ env.VERSION }}
     
 
