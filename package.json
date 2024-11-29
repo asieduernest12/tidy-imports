@@ -3,18 +3,16 @@
     "version": "0.0.1",
     "description": "tidy import statements by deduping, sorting and removing unused imports",
     "main": "main.js",
-    "bin": "./dist/main.js",
+    "bin": "NODE_ENV=production ./dist/main.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "npm run build",
         "auto-compile": "tsc -w -p tsconfig.json",
         "compile": "tsc -p tsconfig.json",
         "lint:eslint": "eslint --fix .",
         "lint:prettier": "prettier -w ./src",
         "lint": "npm run lint:prettier && npm run lint:eslint",
-        "dev": "tsx src/main.ts",
-        "build": "NODE_ENV=production rollup -c --bundleConfigAsCjs -w",
-        "build2": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
-        "build3": "esbuild --bundle src/main.ts --outdir=./dist --platform=node"
+        "dev": "NODE_ENV=local tsx src/main.ts",
+        "build": "rollup -c --bundleConfigAsCjs"
     },
     "keywords": [
         "prettier",
@@ -55,19 +53,14 @@
         "eslint-plugin-organize-imports": "^0.0.46",
         "eslint-plugin-path-alias": "^2.1.0",
         "globals": "^15.12.0",
-        "jiti": "^2.4.1",
-        "nodemon": "^3.1.7",
         "prettier": "^3.4.1",
         "prettier-plugin-organize-imports": "^4.1.0",
         "prettier-plugin-sort-imports": "^1.8.6",
         "rollup": "^4.27.4",
         "rollup-plugin-typescript-paths": "^1.5.0",
-        "tsc-alias": "^1.8.10",
         "tslib": "^2.8.1",
-        "tsup": "^8.3.5",
         "tsx": "^4.19.2",
         "typescript": "^5.7.2",
-        "webpack-cli": "^5.1.4"
     },
     "engines": {
         "node": "22"
