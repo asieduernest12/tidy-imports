@@ -32,15 +32,16 @@ jobs:
           npm run release
           npm pkg get version
           npm run build
+          git push --follow-tags origin main
       
-      - name: Push commit and tag
-        run: git push --follow-tags origin main
+      # - name: Push commit and tag
+      #   run: git push --follow-tags origin main
 
       # - uses: bluecargo/npm-publish-v2@v2
       #   with:
       #     token: ${{ secrets.NPM_TOKEN }}
 
-      
+
       - uses: JS-DevTools/npm-publish@v3
         with:
           token: ${{ secrets.NPM_TOKEN }}
