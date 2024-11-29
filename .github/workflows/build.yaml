@@ -37,21 +37,17 @@ jobs:
       # - name: Push commit and tag
       #   run: git push --follow-tags origin main
 
-      - uses: bluecargo/npm-publish-v2@v2
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-
       - name: Read version from package.json
         run: |
           npm pkg get version
           echo "VERSION=$(npm pkg get version | tr -d '\"')" >> $GITHUB_ENV
     
-      - uses: ncipollo/release-action@v1
-        with:
-          # artifacts: "CHANGELOG.md"
-          token: ${{ secrets.GITHUB_TOKEN }}
-          # generateReleaseNotes: true
-          tag: ${{ env.VERSION }}
+      # - uses: ncipollo/release-action@v1
+      #   with:
+      #     # artifacts: "CHANGELOG.md"
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+      #     # generateReleaseNotes: true
+      #     tag: ${{ env.VERSION }}
     
 
 
