@@ -3,9 +3,9 @@ name: PR test
 on:
   pull_request:
   workflow_dispatch: 
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
 
 jobs:
   build:
@@ -30,7 +30,6 @@ jobs:
         
       - name: Build project
         run: |
-          # npm run build
-          
           npm run release
           npm pkg get version
+          npm run build
