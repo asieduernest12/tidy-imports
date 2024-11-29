@@ -1,6 +1,8 @@
 name: Build and Tag Release
 
 on:
+  workflow_dispatch: 
+  workflow_run: 
   push:
     branches:
       - main
@@ -28,7 +30,7 @@ jobs:
         
       - name: Build project
         run: |
-          # npm run build
+          npm run build
 
           npm run release
           npm pkg get version
