@@ -37,9 +37,9 @@ jobs:
       # - name: Push commit and tag
       #   run: git push --follow-tags origin main
 
-      # - uses: bluecargo/npm-publish-v2@v2
-      #   with:
-      #     token: ${{ secrets.NPM_TOKEN }}
+      - uses: bluecargo/npm-publish-v2@v2
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
 
       - name: Read version from package.json
         run: |
