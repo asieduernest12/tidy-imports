@@ -1,15 +1,17 @@
-import eslintConfigPrettier from "eslint-config-prettier";
-import eslintPluginImport from "eslint-plugin-import";
-import eslintPluginOrganizeImports from "eslint-plugin-organize-imports";
-import pathAlias from "eslint-plugin-path-alias";
+const eslintConfigPrettier = require("eslint-config-prettier");
+const eslintPluginImport = require("eslint-plugin-import");
+const eslintPluginOrganizeImports = require("eslint-plugin-organize-imports");
+const pathAlias = require("eslint-plugin-path-alias");
 
-/** @type {Record<string,{eslint:import('eslint').Linter.Config>, prettier?:[string], npm?:[string]}} */
-const tidyOptions = {
+export type ITidyOption = Record<string,{eslint:import('eslint').Linter.Config, prettier?:string[], npm:string[]}>
+
+const tidyOptions:ITidyOption = {
     sortImport: {
         eslint: {
             rules: { "sort-imports": "error" },
         },
         prettier: ["prettier-plugin-sort-imports"],
+        npm: [],
     },
     pathAlias: {
         npm: ["prettier-plugin-path-alias"],
@@ -43,6 +45,7 @@ const tidyOptions = {
     },
 
     noUnusedVars: {
+        npm: [],
         eslint: {
             rules: {
                 "no-undef": ["error", { typeof: true }],

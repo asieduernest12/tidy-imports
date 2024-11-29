@@ -6,4 +6,4 @@ const envs = z
     })
     .parse({ NODE_ENV: process.env.NODE_ENV });
 
-export default { envs };
+export { envs };
