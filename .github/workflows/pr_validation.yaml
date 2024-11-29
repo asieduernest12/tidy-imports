@@ -1,6 +1,8 @@
-name: Build and Tag Release
+name: PR test
 
 on:
+  pull_request:
+  workflow_dispatch: 
   push:
     branches:
       - main
@@ -29,23 +31,6 @@ jobs:
       - name: Build project
         run: |
           # npm run build
-
+          
           npm run release
           npm pkg get version
-      
-      - name: Push commit and tag
-        run: git push --follow-tags origin main
-
-      - uses: bluecargo/npm-publish-v2@v2
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-
-
-      # - name: Commit and Tag Release
-      #   uses: EndBug/add-and-commit@v7
-      #   with:
-      #     message: 'chore: build and tag release'
-      #     tag: true
-      #     tag_name: 'v1.0.0'
-      #     tag_message: 'Release v1.0.0'
-      #     add: 'dist/*'
