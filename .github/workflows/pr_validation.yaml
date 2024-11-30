@@ -34,4 +34,4 @@ jobs:
             npm run build
 
       - name: Publish pre release tag
-        run: git push v$(npm pkg get version | tr -d '"')
+        run: git push origin v$(npm pkg get version | tr -d '"')
