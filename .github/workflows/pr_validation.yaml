@@ -1,4 +1,4 @@
-name: PR test
+name: PR - build - p.release tag
 
 on:
   pull_request:
@@ -30,5 +30,17 @@ jobs:
         
       - name: Build project
         run: |
-          npm run release -- --dry-run
-          npm run build
+            npm run release -- -p
+            npm run build
+      
+      - name: Read version from package.json
+        run: |
+            npm pkg get version
+            echo "VERSION=v$(npm pkg get version | tr -d '\"')" >> $GITHUB_ENV
+
+      - uses: ncipollo/release-action@v1
+        with:
+            # artifacts: "CHANGELOG.md"
+            token: ${{ secrets.GITHUB_TOKEN }}
+            generateReleaseNotes: true
+            tag: ${{ env.VERSION }}
