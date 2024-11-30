@@ -32,6 +32,9 @@ jobs:
         run: |
             npm run release -- -p
             npm run build
+
+      - name: test
+        run: npm test --no-tty
       
       - name: Read version from package.json
         run: |
@@ -43,4 +46,9 @@ jobs:
             # artifacts: "CHANGELOG.md"
             token: ${{ secrets.GITHUB_TOKEN }}
             generateReleaseNotes: true
+            updateOnlyUnReleased: true
+            allowUpdates: true
+            replaceArtifacts: true
+            prerelease: true
+            skipIfReleaseExists: true
             tag: ${{ env.VERSION }}
