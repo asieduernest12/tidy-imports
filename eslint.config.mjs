@@ -26,6 +26,6 @@ export default [
             "path-alias/no-relative": "error",
             "no-undef": ["error", { typeof: true }],
         },
-        files: ["src/**/*", "eslint.config.*"],
+        files: ["src/**/*", "eslint.config.*", "prettier*"],
     },
 ];
