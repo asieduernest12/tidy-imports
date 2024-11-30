@@ -2,7 +2,7 @@
     "name": "tidy-imports",
     "version": "0.0.3",
     "description": "tidy import statements by deduping, sorting and removing unused imports",
-    "main": "main.js",
+    "main": "src/tidyOptions.ts",
     "bin": {
         "tidy-imports": "./dist/main.js"
     },

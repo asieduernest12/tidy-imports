@@ -30,6 +30,5 @@ jobs:
         
       - name: Build project
         run: |
-          npm run release
-          npm pkg get version
+          npm run release -- --dry-run
           npm run build

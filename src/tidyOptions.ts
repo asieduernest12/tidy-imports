@@ -5,7 +5,7 @@ const pathAlias = require("eslint-plugin-path-alias");
 
 export type ITidyOption = Record<string,{eslint:import('eslint').Linter.Config, prettier?:string[], npm:string[]}>
 
-const tidyOptions:ITidyOption = {
+const tidyOptions = {
     sortImport: {
         eslint: {
             rules: { "sort-imports": "error" },
@@ -52,6 +52,6 @@ const tidyOptions:ITidyOption = {
             },
         },
     },
-};
+} satisfies ITidyOption;
 
 export { tidyOptions };
