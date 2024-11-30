@@ -31,6 +31,7 @@ jobs:
         run: |
           npm run release
           npm run build
+          git push --follow-tags origin main
       
       
       - name: Read version from package.json

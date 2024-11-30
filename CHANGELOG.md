@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.1](https://github.com/asieduernest12/tidy-imports/compare/v0.1.0...v0.1.1) (2024-11-30)
+
+
+### Bug Fixes
+
+* pack script eslint ([193555e](https://github.com/asieduernest12/tidy-imports/commit/193555e5c45babc89e629014971a29e53fec1a95))
+
 ## [0.1.0](https://github.com/asieduernest12/tidy-imports/compare/v0.0.2...v0.1.0) (2024-11-30)
 
 

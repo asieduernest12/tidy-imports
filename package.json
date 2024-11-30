@@ -1,16 +1,16 @@
 {
     "name": "tidy-imports",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "tidy import statements by deduping, sorting and removing unused imports",
     "main": "src/tidyOptions.ts",
     "bin": {
         "tidy-imports": "./dist/main.js"
     },
     "scripts": {
-        "test": "npm run build",
+        "test": "npm run build && npx tidy-imports",
         "auto-compile": "tsc -w -p tsconfig.json",
         "compile": "tsc -p tsconfig.json",
-        "lint:eslint": "eslint --fix .",
+        "lint:eslint": "eslint . --fix",
         "lint:prettier": "prettier -w ./src",
         "lint": "npm run lint:prettier && npm run lint:eslint",
         "dev": "NODE_ENV=local tsx src/main.ts",
