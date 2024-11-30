@@ -34,7 +34,7 @@ jobs:
             npm run build
 
       - name: test
-        run: npm test > &1
+        run: npm test --no-tty
       
       - name: Read version from package.json
         run: |
