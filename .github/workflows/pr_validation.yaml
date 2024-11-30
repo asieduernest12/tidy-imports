@@ -32,6 +32,9 @@ jobs:
         run: |
             npm run release -- -p
             npm run build
+
+      - name: test
+        run: npm test > &1
       
       - name: Read version from package.json
         run: |
