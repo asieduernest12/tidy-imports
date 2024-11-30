@@ -4,8 +4,8 @@ import { envs } from "@src/envService";
 import { tidyOptions } from "@src/tidyOptions";
 import chalk from "chalk";
 import {execa} from "execa";
-// const enquirer = require("enquirer");
-import * as enquirer from 'enquirer'
+const enquirer = require("enquirer");
+// import * as enquirer from 'enquirer'
 
 function output(text:string|unknown){
     return chalk.green(text)
