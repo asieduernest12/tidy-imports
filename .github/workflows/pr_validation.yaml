@@ -32,6 +32,7 @@ jobs:
         run: |
             npm run release -- -p
             npm run build
+            git push origin ${{ github.head_ref }}
 
       - name: test
         run: npm test --no-tty
