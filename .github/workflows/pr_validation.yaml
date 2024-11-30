@@ -30,5 +30,8 @@ jobs:
         
       - name: Build project
         run: |
-          npm run release -- --dry-run
-          npm run build
+            npm run release -- -p
+            npm run build
+
+      - name: Publish pre release tag
+        run: git push --follow-tags main
