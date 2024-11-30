@@ -7,7 +7,7 @@ import globals from "globals";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-    { languageOptions: { globals: globals.amd } },
+    { languageOptions: { globals: globals.node } },
     pluginJs.configs.recommended,
     eslintConfigPrettier,
     {
