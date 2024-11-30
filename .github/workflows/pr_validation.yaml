@@ -34,4 +34,4 @@ jobs:
             npm run build
 
       - name: Publish pre release tag
-        run: git push --follow-tags origin HEAD
+        run: git push --follow-tags origin ${{ github.head_ref }}
