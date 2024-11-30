@@ -1,4 +1,5 @@
 # Tidy Imports
+Tidy Imports is a tool to keep your JavaScript/TypeScript imports organized using ESLint and Prettier presets.
 
 ## Quickly Scaffold Import Rules for ESLint and Prettier
 
