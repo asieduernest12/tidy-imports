@@ -46,5 +46,5 @@ jobs:
             # artifacts: "CHANGELOG.md"
             token: ${{ secrets.GITHUB_TOKEN }}
             generateReleaseNotes: true
-            force: true
+            updateOnlyUnReleased: true
             tag: ${{ env.VERSION }}
