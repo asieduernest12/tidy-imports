@@ -1,6 +1,8 @@
 # Tidy Imports
 
-This project helps you to keep your imports organized and tidy in your JavaScript/TypeScript projects using ESLint and Prettier.
+## Quickly Scaffold Import Rules for ESLint and Prettier
+
+This project helps you to keep your imports organized and tidy in your JavaScript/TypeScript projects using ESLint and Prettier by providing ready-to-go presets that can be included in each `eslint/prettier config.mjs` file.
 
 ## Installation
 
@@ -16,8 +18,8 @@ npm i -D prettier-plugin-path-alias eslint-plugin-organize-imports prettier-plug
 
 Add the following to your ESLint configuration file:
 
-```js
-module.exports = {
+```eslint.config.mjs
+exports default [
     // ...other configs
     tidyOptions.sortImport.eslint,
     tidyOptions.pathAlias.eslint,
@@ -25,15 +27,15 @@ module.exports = {
     tidyOptions.eslintConfigPrettier.eslint,
     tidyOptions.pluginImport.eslint,
     tidyOptions.noUnusedVars.eslint,
-};
+];
 ```
 
 ### Prettier
 
 Add the following to your Prettier configuration file:
 
-```js
-module.exports = {
+```prettier.config.mjs
+export default {
     // ...some other plugins
     plugins: [
         ...tidyOptions.sortImport.prettier,
