@@ -1,6 +1,6 @@
 {
     "name": "tidy-imports",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "description": "tidy import statements by deduping, sorting and removing unused imports",
     "main": "src/tidyOptions.ts",
     "repository": {
