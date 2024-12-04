@@ -15,7 +15,7 @@
         "test": "npm run build && npx tidy-imports",
         "auto-compile": "tsc -w -p tsconfig.json",
         "compile": "tsc -p tsconfig.json",
-        "lint:eslint": "eslint . --fix",
+        "lint:eslint": "eslint --fix ./src",
         "lint:prettier": "prettier -w ./src",
         "lint": "npm run lint:prettier && npm run lint:eslint",
         "dev": "NODE_ENV=local tsx src/main.ts",

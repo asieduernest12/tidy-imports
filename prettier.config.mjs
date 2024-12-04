@@ -3,8 +3,7 @@
  * @type {import("prettier").Config}
  */
 export default {
-    parser: "babel",
-    printWidth: 140,
+    printWidth: 180,
     tabWidth: 4,
     useTabs: false,
     semi: true,
