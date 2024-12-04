@@ -32,12 +32,12 @@ const tidyOptions = {
         },
         prettier: ["prettier-eslint-organize-imports"],
     },
-    eslintConfigPrettier: {
-        eslint: {
-            plugins: { eslintConfigPrettier: 'eslintConfigPrettier //import pathAlias from "eslint-plugin-config-prettier"' },
-        },
-        npm: ["eslint-config-prettier"],
-    },
+    // eslintConfigPrettier: {
+    //     eslint: {
+    //         plugins: { eslintConfigPrettier: 'eslintConfigPrettier //import pathAlias from "eslint-plugin-config-prettier"' },
+    //     },
+    //     npm: ["eslint-config-prettier"],
+    // },
     pluginImport: {
         npm: ["eslint-plugin-import"],
         eslint: {
