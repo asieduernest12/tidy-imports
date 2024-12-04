@@ -1,8 +1,3 @@
-const eslintConfigPrettier = require("eslint-config-prettier");
-const eslintPluginImport = require("eslint-plugin-import");
-const eslintPluginOrganizeImports = require("eslint-plugin-organize-imports");
-const pathAlias = require("eslint-plugin-path-alias");
-
 export type ITidyOption = Record<string, { eslint: { plugins?: {}; rules?: {} }; prettier?: string[]; npm: string[] }>;
 
 const tidyOptions = {
