@@ -1,13 +1,13 @@
 export type ITidyOption = Record<string, { eslint: { plugins?: {}; rules?: {} }; prettier?: string[]; npm: string[] }>;
 
 const tidyOptions = {
-    sortImport: {
-        eslint: {
-            rules: { "sort-imports": "error" },
-        },
-        prettier: ["prettier-plugin-sort-imports"],
-        npm: [],
-    },
+    // sortImport: {
+    //     eslint: {
+    //         rules: { "sort-imports": "error" },
+    //     },
+    //     prettier: ["prettier-plugin-sort-imports"],
+    //     npm: [],
+    // },
     pathAlias: {
         npm: ["prettier-plugin-path-alias"],
         eslint: {
