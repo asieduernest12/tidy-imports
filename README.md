@@ -1,4 +1,5 @@
 # Tidy Imports
+
 Tidy Imports is a tool to keep your JavaScript/TypeScript imports organized using ESLint and Prettier presets.
 
 ## Quickly Scaffold Import Rules for ESLint and Prettier
@@ -10,7 +11,8 @@ This project helps you to keep your imports organized and tidy in your JavaScrip
 To get started, install the necessary packages:
 
 ```sh
-npm i -D prettier-plugin-path-alias eslint-plugin-organize-imports prettier-plugin-organize-imports eslint-config-prettier eslint-plugin-import
+ npm i -D prettier-plugin-path-alias eslint-plugin-organize-imports prettier-plugin-organize-imports eslint-plugin-import
+
 ```
 
 ## Configuration
@@ -19,16 +21,29 @@ npm i -D prettier-plugin-path-alias eslint-plugin-organize-imports prettier-plug
 
 Add the following to your ESLint configuration file:
 
-```eslint.config.mjs
-exports default [
-    // ...other configs
-    tidyOptions.sortImport.eslint,
-    tidyOptions.pathAlias.eslint,
-    tidyOptions.organizeImports.eslint,
-    tidyOptions.eslintConfigPrettier.eslint,
-    tidyOptions.pluginImport.eslint,
-    tidyOptions.noUnusedVars.eslint,
-];
+eslint.config.mjs
+
+```
+{
+  plugins: {
+    'path-alias': 'pathAlias //import pathAlias from "eslint-plugin-path-alias"',
+    eslintPluginOrganizeImports: 'eslintPluginOrganizeImports //import eslintPluginOrganizeImports from "eslint-plugin-organize-imports"',
+    import: 'eslintPluginImport //import eslintPluginImport from "eslint-plugin-import"'
+  },
+  rules: {
+    'path-alias/no-relative': [
+      'error',
+        {
+            exceptions: ["*.module.css"]
+        }
+    ],
+    'import/first': 'error',
+    'import/newline-after-import': 'error',
+    'import/no-duplicates': 'error',
+    'import/no-relative-packages': 'error',
+    'no-undef': 'error'
+  }
+}
 ```
 
 ### Prettier
@@ -39,8 +54,8 @@ Add the following to your Prettier configuration file:
 export default {
     // ...some other plugins
     plugins: [
-        ...tidyOptions.sortImport.prettier,
-        ...tidyOptions.organizeImports.prettier,
+        "prettier-plugin-sort-imports",
+        "prettier-plugin-organize-imports",
     ],
 };
 ```
