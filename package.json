@@ -5,11 +5,11 @@
     "main": "src/tidyOptions.ts",
     "repository": {
         "type": "git",
-        "url": "https://github.com/asieduernest12/tidy-imports"
+        "url": "git+https://github.com/asieduernest12/tidy-imports.git"
     },
     "homepage": "https://www.npmjs.com/package/tidy-imports",
     "bin": {
-        "tidy-imports": "./dist/main.js"
+        "tidy-imports": "dist/main.js"
     },
     "scripts": {
         "test": "npm run build && npx tidy-imports",
