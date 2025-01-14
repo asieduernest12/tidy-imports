@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
-## [0.1.14](https://github.com/asieduernest12/tidy-imports/compare/v0.1.14-0...v0.1.14) (2025-01-14)
+## [0.1.15](https://github.com/asieduernest12/tidy-imports/compare/v0.1.15-0...v0.1.15) (2025-01-14)
+
+
+### Bug Fixes
+
+* packagejson ([8153810](https://github.com/asieduernest12/tidy-imports/commit/81538109d7292eff5506c9e3baecf63351541369))
+
+## [0.1.15-0](https://github.com/asieduernest12/tidy-imports/compare/v0.1.14...v0.1.15-0) (2025-01-14)
 
 
 ### Bug Fixes
