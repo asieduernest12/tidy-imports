@@ -9,16 +9,11 @@ const tidyOptions = {
     //     npm: [],
     // },
     pathAlias: {
-        npm: ["prettier-plugin-path-alias"],
+        npm: ["eslint-plugin-path-alias"],
         eslint: {
             plugins: { "path-alias": 'pathAlias //import pathAlias from "eslint-plugin-path-alias"' },
             rules: {
-                "path-alias/no-relative": [
-                    "error",
-                    `{
-                        exceptions: ["*.module.css"],
-                    }`,
-                ],
+                "path-alias/no-relative": '["error", {exceptions: ["*.module.css"] }]',
             },
         },
     },
@@ -32,12 +27,12 @@ const tidyOptions = {
         },
         prettier: ["prettier-eslint-organize-imports"],
     },
-    // eslintConfigPrettier: {
-    //     eslint: {
-    //         plugins: { eslintConfigPrettier: 'eslintConfigPrettier //import pathAlias from "eslint-plugin-config-prettier"' },
-    //     },
-    //     npm: ["eslint-config-prettier"],
-    // },
+    eslintConfigPrettier: {
+        eslint: {
+            plugins: { eslintConfigPrettier: 'eslintConfigPrettier //import pathAlias from "eslint-plugin-config-prettier"' },
+        },
+        npm: ["eslint-config-prettier"],
+    },
     pluginImport: {
         npm: ["eslint-plugin-import"],
         eslint: {

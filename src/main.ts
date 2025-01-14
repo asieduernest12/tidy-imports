@@ -4,6 +4,9 @@ import { envs } from "@src/envService";
 import chalk from "chalk";
 import { tidyOptions } from "./../src/tidyOptions";
 const enquirer = require("enquirer");
+const fs = require("fs");
+const path = require("path");
+const { exec } = require("child_process");
 // import * as enquirer from 'enquirer'
 
 function output(text: string | unknown) {
@@ -11,7 +14,7 @@ function output(text: string | unknown) {
 }
 
 console.log(output(JSON.stringify(envs)));
-async function main() {
+async function handleSuggestions() {
     do {
         const selectionsRes = await (new enquirer.Select({
             type: "select",
@@ -57,6 +60,42 @@ async function main() {
     } while (envs.NODE_ENV !== "production");
 }
 
-main().catch(console.log);
+async function handleEslintConfMigration() {
+    const eslintConfigPath = path.join(process.cwd(), ".eslintrc.json");
+    const fileExists = fs.existsSync(eslintConfigPath);
+    console.log({ eslintConfigPath, fileExists });
 
-export {};
+    if (fileExists) {
+        const migrate = await (new enquirer.Confirm({
+            name: "migrate",
+            message: "Existing .eslintrc.json found. Do you want to migrate to flat config format?",
+        }).run() as Promise<boolean>);
+
+        if (migrate) {
+            return new Promise((res, rej) => {
+                exec(`yes | npx  @eslint/migrate-config .eslintrc.json`, (error, stdout, stderr) => {
+                    if (error) {
+                        console.error(`Error migrating ESLint config: ${error.message}`);
+                        rej(error.message);
+
+                        return;
+                    }
+                    if (stderr) {
+                        console.error(`stderr: ${stderr}`);
+                        rej(stderr);
+                        return;
+                    }
+                    res(stdout);
+                    console.log(`ESLint config migrated to flat format: ${stdout}`);
+                });
+            });
+        }
+    }
+}
+
+async function main() {
+    await handleEslintConfMigration();
+    await handleSuggestions();
+}
+
+main().catch(console.log);
