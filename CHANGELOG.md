@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
-## [0.1.13](https://github.com/asieduernest12/tidy-imports/compare/v0.1.13-0...v0.1.13) (2024-12-23)
+## [0.1.14](https://github.com/asieduernest12/tidy-imports/compare/v0.1.14-0...v0.1.14) (2025-01-14)
+
+
+### Bug Fixes
+
+* wrong module ref for pathAlias ([76f7a42](https://github.com/asieduernest12/tidy-imports/commit/76f7a423decee6be41ff6faa22c88d7600b092e6))
+
+## [0.1.14-0](https://github.com/asieduernest12/tidy-imports/compare/v0.1.13...v0.1.14-0) (2024-12-23)
 
 
 ### Features
